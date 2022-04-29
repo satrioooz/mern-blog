@@ -1,4 +1,4 @@
-import { ON_CHANGE_REGISTER } from "../ActionType/Type";
+import { ON_CHANGE_REGISTER, STATUS_API } from "../ActionType/Type";
 
 const initState = {
   user: {
@@ -7,6 +7,7 @@ const initState = {
     password: "",
     confirmPassword: "",
   },
+  status: "",
 };
 
 const Oauth = (state = initState, action) => {
@@ -19,6 +20,12 @@ const Oauth = (state = initState, action) => {
           [action.name]: action.value,
         },
       };
+    case STATUS_API: {
+      return {
+        ...state,
+        status: action.status,
+      };
+    }
 
     default:
       return state;

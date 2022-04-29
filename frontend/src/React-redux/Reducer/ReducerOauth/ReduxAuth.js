@@ -1,6 +1,8 @@
-import { ON_CHANGE_REGISTER } from "../../ActionType/Type";
+import { ON_CHANGE_REGISTER, STATUS_API } from "../../ActionType/Type";
 import axios from "axios";
 import { API } from "../../../API/API";
+import toast from "react-hot-toast";
+import { postRegis } from "../../../utils/FetchData";
 
 // ======= START ON CHANGE REGISTER =======
 export const setChangeRegister = (name, value) => {
@@ -12,14 +14,20 @@ export const setChangeRegister = (name, value) => {
 
 export const setPostRegis = (data) => {
   return (dispatch) => {
-    axios
-      .post(`${API}register`, data)
+    postRegis(data)
       .then((res) => {
+        let status = res.data.message;
         console.log(res.data);
-        alert("success");
+        dispatch({
+          type: STATUS_API,
+          status,
+        });
+        toast.success("login successful, check email for verification");
       })
-      .catch((err) => {
-        console.log(err.message);
+      .catch((errors) => {
+        errors.response.data.errors.map((item) => {
+          toast.error(item.msg);
+        });
       });
   };
 };
