@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Routers from "./Router/Routers";
 
 function App() {
-  return <div className="App">
-  <h1 className="text-bold text-[3rem]">Hello there</h1>
-  </div>;
+  return (
+    <div className="App">
+      <Routers />
+    </div>
+  );
 }
 
 export default App;
