@@ -4,7 +4,7 @@ node_modules
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,dotenv,windows,node
 
 ### dotenv ###
-#.env
+.env
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
