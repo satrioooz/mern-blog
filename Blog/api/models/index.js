@@ -9,6 +9,6 @@ db.nodemailer = require("nodemailer");
 db.crypto = require("crypto");
 db.jwt = require("jsonwebtoken");
 db.bcrypt = require("bcrypt");
-db.ev = require('express-validator');
+db.ev = require("express-validator");
 
 module.exports = db;
