@@ -29,5 +29,5 @@ db.mongoose
 require("./api/routes/user.routes")(app);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Starting development server http://localhost:5000`);
+  console.log(`Starting development server ${process.env.PORT}`);
 });
