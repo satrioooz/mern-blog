@@ -52,11 +52,13 @@ const Register = () => {
       <div className="flex w-full items-center justify-center px-[25px]">
         <Toaster />
         <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] bg-slate-200">
-          <h1 className="text-center text-semibold text-[1.2rem] text-black">
+          <h1 className="text-center text-semibold text-[1.2rem] text-black dark:text-white">
             Register
           </h1>
           <div className="flex flex-col mb-3">
-            <label className="text-black text-sm">Username</label>
+            <label className="text-black dark:focus:text-white text-sm">
+              Username
+            </label>
             <input
               value={nama}
               onChange={(e) =>
@@ -75,7 +77,7 @@ const Register = () => {
               onChange={(e) =>
                 dispatch(setChangeRegister("email", e.target.value))
               }
-              className="bg-gray-800 w-full h-10 px-3 py-2 rounded-lg text-white placeholder:text-slate-400"
+              className="bg-gray-800  w-full h-10 px-3 py-2 rounded-lg text-black dark:text-white placeholder:text-slate-400"
               type="email"
               placeholder="Enter you email"
             />
