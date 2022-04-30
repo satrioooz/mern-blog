@@ -1,30 +1,9 @@
 
-[data-theme="dark"] {
-  body {
-    background: hsl(260, 15%, 4%);
-  }
-  nav {
-    background: #1f1d27;
-  }
-  .theme-toggler__label {
-    color: hsl(263, 26%, 82%);
-  }
-  .section-1 {
-    background: hsl(260, 15%, 8%);
-  }
-  .section-2 {
-    background: hsl(260, 15%, 18%);
-  }
-  .section-3 {
-    background: hsl(260, 15%, 28%);
-  }
-}
 
 /* ************ */
 /* Button Chekbox */
 /* ************ */
 .settings-option {
-  padding: 0.5em 1em;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -44,7 +23,7 @@
   display: inline-block;
   vertical-align: middle;
   flex: 1;
-  margin-right: 2em;
+  margin-right: 5px;
   color: #35394b;
 }
 
