@@ -51,7 +51,7 @@ const Register = () => {
     <div className="flex bg-primary text-primary items-center w-full h-screen">
       <div className="flex w-full items-center justify-center px-[25px]">
         <Toaster />
-        <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] bg-slate-200">
+        <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] bg-darkCol lg:bg-slate-200">
           <h1 className="text-center text-semibold text-[1.2rem] text-black dark:text-white">
             Register
           </h1>
