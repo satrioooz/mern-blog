@@ -11,16 +11,16 @@ const Navbar = () => {
   const [bar, setBar] = useState(false);
   return (
     <>
-      <nav className="nav flex justify-between  w-full px-5  bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
+      <nav className="nav flex justify-between  w-full px-5  bg-white border-b border-gray-200 dark:border-gray-600 h-[60px] dark:bg-gray-800">
         <div className="flex items-center ">
-          <img src={iTerms} className="w-[10%] mr-1" />
+          <img src={iTerms} className="w-[7%] mr-1" />
           <h1 className="items-center  text-[1.3rem] dark:text-white  font-bold">
             Blog co
           </h1>
         </div>
 
-        <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium mx-auto h-full items-center ">
+        <div class="hidden lg:absolute lg:right-[12%] lg:h-[60px] lg:mx-auto w-full md:block md:w-auto" id="mobile-menu">
+          <ul className="flex ] flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium mx-auto h-full items-center ">
             <li>
               <Link className="hover:text-blue-500 dark:text-white" to="/">
                 Home
@@ -41,8 +41,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
+    <div className="lg:absolute lg:right-[20px]">
         <Toggle />
+
+    </div>
         <div class="flex items-center md:order-2">
           <button
             type="button"
