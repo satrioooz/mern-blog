@@ -7,4 +7,5 @@
 
 <!-- mobile layout and images -->
 ### Mobile Layout
-![img] (./frontend/src/images/Register-layout.png)
+<!-- images -->
+![img] (/frontend/images/mobile-layout.png)
