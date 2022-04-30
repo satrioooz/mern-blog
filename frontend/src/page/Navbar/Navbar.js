@@ -23,8 +23,8 @@ const Navbar = () => {
               Register
             </Link>
           </li>
-        </ul>
         <Toggle />
+        </ul>
       </div>
       <Outlet />
     </>
