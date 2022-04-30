@@ -3,7 +3,7 @@
 
 ### DEMO
 [link]: (https://blog-co.vercel.app/)
-[link] (https://blog-co.vercel.app/)
+[] (https://blog-co.vercel.app/)
 
 <!-- mobile layout and images -->
 ### Mobile Layout
