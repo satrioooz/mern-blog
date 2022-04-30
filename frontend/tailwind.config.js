@@ -14,6 +14,7 @@ module.exports = {
       textColor: {
         accent: "var(--color-text-accent)",
         darkBlue: "#0379FF",
+        greyLight: "#6A7281",
         primary: "#F7F9FF",
         secondary: "var(--color-text-secondary)",
         lightDark: "#F7F9FF",
