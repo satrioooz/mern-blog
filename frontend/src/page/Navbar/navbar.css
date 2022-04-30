@@ -1,0 +1,18 @@
+.mobile {
+  display: none;
+}
+
+@media (max-width: 570px) {
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 61px;
+    left: 0;
+    align-items: center;
+    height: 85vh;
+    justify-content: center;
+    right: 0;
+    background: #fff;
+  }
+}

@@ -48,15 +48,15 @@ const Register = () => {
   };
 
   return (
-    <div className="flex bg-primary text-primary items-center w-full h-screen">
+    <div className="flex bg-primary text-primary dark:bg-darkCol items-center w-full h-screen">
       <div className="flex w-full items-center justify-center px-[25px]">
         <Toaster />
-        <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] dark:bg-darkCol bg-slate-200">
+        <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] dark:bg-navCol bg-slate-200">
           <h1 className="text-center text-semibold text-[1.2rem] text-black dark:text-white">
             Register
           </h1>
           <div className="flex flex-col mb-3">
-            <label className="text-black dark:text-white text-sm">
+            <label className="text-black font-medium dark:text-white text-sm">
               Username
             </label>
             <input
@@ -64,46 +64,52 @@ const Register = () => {
               onChange={(e) =>
                 dispatch(setChangeRegister("nama", e.target.value))
               }
-              className="bg-gray-800 w-full h-10 px-3 py-2 rounded-lg text-white placeholder:text-slate-400"
+              className="bg-ligthDark dark:bg-primary w-full h-10 px-3 py-2 rounded-lg text-black dark:text-white placeholder:text-slate-400"
               type="text"
               placeholder="Enter you username"
             />
           </div>
 
           <div className="flex flex-col mb-3">
-            <label className="text-black text-sm">Email</label>
+            <label className="text-black dark:text-white font-medium text-sm">
+              Email
+            </label>
             <input
               value={email}
               onChange={(e) =>
                 dispatch(setChangeRegister("email", e.target.value))
               }
-              className="bg-gray-800  w-full h-10 px-3 py-2 rounded-lg text-black dark:text-white placeholder:text-slate-400"
+              className="bg-ligthDark dark:bg-primary  w-full h-10 px-3 py-2 rounded-lg text-black dark:text-white placeholder:text-slate-400"
               type="email"
               placeholder="Enter you email"
             />
           </div>
 
           <div className="flex flex-col mb-3">
-            <label className="text-black text-sm ">Password</label>
+            <label className="text-black dark:text-white font-medium text-sm ">
+              Password
+            </label>
             <input
               value={password}
               onChange={(e) =>
                 dispatch(setChangeRegister("password", e.target.value))
               }
-              className="bg-gray-800 w-full h-10 px-3 py-2 rounded-lg text-white placeholder:text-slate-400 "
+              className="text-black dark:text-white bg-ligthDark dark:bg-primary w-full h-10 px-3 py-2 rounded-lg  placeholder:text-slate-400 "
               type="password"
               placeholder="Enter you password"
             />
           </div>
 
           <div className="flex flex-col mb-3">
-            <label className="text-black text-sm">Confirm Password</label>
+            <label className="text-black dark:text-white font-medium text-sm">
+              Confirm Password
+            </label>
             <input
               value={confirmPassword}
               onChange={(e) => {
                 dispatch(setChangeRegister("confirmPassword", e.target.value));
               }}
-              className="bg-gray-800 w-full h-10 px-3 py-2 peer text-white placeholder:text-slate-400 rounded-lg"
+              className="bg-ligthDark dark:bg-primary w-full h-10 px-3 py-2 peer text-black dark:text-white placeholder:text-slate-400 rounded-lg"
               type="password"
               placeholder="Enter you password"
             />
@@ -118,8 +124,8 @@ const Register = () => {
             onClick={submitRegister}
             className={
               loading
-                ? "cursor-wait bg-blue-300 flex items-center justify-center rounded-full hover:bg-blue-400 hover:text-white h-[40px]"
-                : "bg-blue-300 flex items-center justify-center rounded-full hover:bg-blue-400 hover:text-white h-[40px]"
+                ? "cursor-wait dark:bg-darkBlue flex items-center justify-center rounded-full hover:bg-blue-400 hover:text-white h-[40px]"
+                : "dark:bg-darkBlue bg-darkBlue flex items-center justify-center rounded-full hover:bg-blue-400 hover:text-white h-[40px]"
             }
             type="submit"
             placeholder="Submit"
