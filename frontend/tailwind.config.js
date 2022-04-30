@@ -4,14 +4,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        darkCol: "#1F2B47",
+        darkCol: "#111827",
         primary: "var(--color-bg-primary)",
         secondary: "var(--color-bg-secondary)",
+        darkBlue: "#0379FF",
+        navCol: "#1E2837",
+        lightDark: "#F7F9FF",
       },
       textColor: {
         accent: "var(--color-text-accent)",
-        primary: "var(--color-text-primary)",
+        darkBlue: "#0379FF",
+        primary: "#F7F9FF",
         secondary: "var(--color-text-secondary)",
+        lightDark: "#F7F9FF",
       },
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
