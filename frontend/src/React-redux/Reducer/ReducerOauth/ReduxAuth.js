@@ -1,4 +1,8 @@
-import { ON_CHANGE_REGISTER, STATUS_API } from "../../ActionType/Type";
+import {
+  BACK_DEFAULT_CHANGE,
+  ON_CHANGE_REGISTER,
+  STATUS_API,
+} from "../../ActionType/Type";
 import axios from "axios";
 import { API } from "../../../API/API";
 import toast from "react-hot-toast";
@@ -32,3 +36,17 @@ export const setPostRegis = (data) => {
   };
 };
 // ======= END POST REGISTER =======
+
+// ======= START DEFAULT VALUE REGISTER =======
+export const setChangeDefault = (nama,confirmPassword, email, password) => {
+  return {
+    type: BACK_DEFAULT_CHANGE,
+    payload: {
+      nama: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
+  };
+};
+// ======= END DEFAULT VALUE REGISTER =======

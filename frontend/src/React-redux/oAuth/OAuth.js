@@ -1,4 +1,8 @@
-import { ON_CHANGE_REGISTER, STATUS_API } from "../ActionType/Type";
+import {
+  BACK_DEFAULT_CHANGE,
+  ON_CHANGE_REGISTER,
+  STATUS_API,
+} from "../ActionType/Type";
 
 const initState = {
   user: {
@@ -26,6 +30,11 @@ const Oauth = (state = initState, action) => {
         status: action.status,
       };
     }
+    case BACK_DEFAULT_CHANGE:
+      return {
+        ...state,
+        user: action.payload,
+      };
 
     default:
       return state;
