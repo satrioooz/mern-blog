@@ -1,4 +1,4 @@
-import React,{useState,createContext} from "react";
+import React, { useState, createContext } from "react";
 
 const getInitialTheme = (_) => {
   if (typeof window !== "undefined" && window.localStorage) {

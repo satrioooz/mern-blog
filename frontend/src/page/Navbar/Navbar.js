@@ -24,7 +24,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <Toggle/>
+        <Toggle />
       </div>
       <Outlet />
     </>
