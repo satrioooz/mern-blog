@@ -35,7 +35,7 @@ const Register = () => {
       postRegis(data)
         .then((res) => {
           setLoading(false);
-          dispatch(setChangeDefault(nama,confirmPassword, email, password));
+          dispatch(setChangeDefault(nama, confirmPassword, email, password));
           toast.success("login successful, check email for verification");
         })
         .catch((errors) => {
@@ -48,7 +48,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex bg-slate-700 items-center w-full h-screen">
+    <div className="flex bg-primary text-primary items-center w-full h-screen">
       <div className="flex w-full items-center justify-center px-[25px]">
         <Toaster />
         <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] bg-slate-200">

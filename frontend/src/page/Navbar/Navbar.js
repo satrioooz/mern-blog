@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { Toggle } from "../../Components/Config/Toggle";
 
 const Navbar = () => {
   return (
@@ -23,6 +24,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        <Toggle/>
       </div>
       <Outlet />
     </>

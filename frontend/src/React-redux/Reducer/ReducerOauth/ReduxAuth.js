@@ -38,7 +38,7 @@ export const setPostRegis = (data) => {
 // ======= END POST REGISTER =======
 
 // ======= START DEFAULT VALUE REGISTER =======
-export const setChangeDefault = (nama,confirmPassword, email, password) => {
+export const setChangeDefault = (nama, confirmPassword, email, password) => {
   return {
     type: BACK_DEFAULT_CHANGE,
     payload: {

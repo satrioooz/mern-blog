@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { ThemeProvider } from "./Components/Config/ThemeContent";
 import Routers from "./Router/Routers";
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider>
       <Routers />
-    </div>
+    </ThemeProvider>
   );
 }
 
