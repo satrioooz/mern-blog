@@ -2,7 +2,7 @@
 
 
 ### DEMO
-[link]: (https://blog-co.vercel.app/)
+![link]: (https://blog-co.vercel.app/)
 <a href=(https://blog-co.vercel.app/)></a>
 
 <!-- mobile layout and images -->
