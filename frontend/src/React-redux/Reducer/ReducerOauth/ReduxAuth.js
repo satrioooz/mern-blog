@@ -1,5 +1,6 @@
 import {
   BACK_DEFAULT_CHANGE,
+  ON_CHANGE_LOGIN,
   ON_CHANGE_REGISTER,
   STATUS_API,
 } from "../../ActionType/Type";
@@ -7,6 +8,7 @@ import axios from "axios";
 import { API } from "../../../API/API";
 import toast from "react-hot-toast";
 import { postRegis } from "../../../utils/FetchData";
+import { dispatch } from "react-hot-toast/dist/core/store";
 
 // ======= START ON CHANGE REGISTER =======
 export const setChangeRegister = (name, value) => {
@@ -50,3 +52,9 @@ export const setChangeDefault = (nama, confirmPassword, email, password) => {
   };
 };
 // ======= END DEFAULT VALUE REGISTER =======
+
+// ======= START ON CHANGE LOGIN =======
+export const setChangeLogin = (name,value) => {
+  return {type:ON_CHANGE_LOGIN,name,value}
+}
+// ======= END ON CHANGE LOGIN =======

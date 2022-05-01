@@ -1,5 +1,6 @@
 import {
   BACK_DEFAULT_CHANGE,
+  ON_CHANGE_LOGIN,
   ON_CHANGE_REGISTER,
   STATUS_API,
 } from "../ActionType/Type";
@@ -10,6 +11,10 @@ const initState = {
     email: "",
     password: "",
     confirmPassword: "",
+  },
+  formLogin: {
+    email: '',
+    password: '',
   },
   status: "",
 };
@@ -35,6 +40,14 @@ const Oauth = (state = initState, action) => {
         ...state,
         user: action.payload,
       };
+      case ON_CHANGE_LOGIN:
+        return {
+          ...state,
+          formLogin: {
+            ...state.user,
+            [action.name]: action.value,
+          },
+        };
 
     default:
       return state;
