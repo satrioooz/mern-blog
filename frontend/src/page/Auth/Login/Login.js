@@ -8,7 +8,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const formLogin = useSelector((state) => state.Oauth.formLogin)
   const {email, password} = formLogin;
-  const submitRegister = () => {
+  const submitRegister = (e) => {
+    e.preventDefault()
     let data = {
       email: email,
       password: password

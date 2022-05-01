@@ -61,12 +61,13 @@ export const setChangeLogin = (name,value) => {
 // ======= START POST LOGIN =======
 export const setPostLogin = (url,data) => {
   return (dispatch) => {
-    axios.post(`${API},${url}`, data)
+    axios.post(`${API}${url}`, data)
     .then((res) => {
       console.log(res.data)
     })
-    .catch((error) => {
-      console.log(error)
+    .catch((err) => {
+      console.log(err.response.data.message)
+      toast.error(err.response.data.message)
     })
   }
 }
