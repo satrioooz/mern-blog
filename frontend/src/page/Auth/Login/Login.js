@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { setChangeLogin } from '../../../React-redux/Reducer/ReducerOauth/ReduxAuth';
+import { setChangeLogin, setPostLogin } from '../../../React-redux/Reducer/ReducerOauth/ReduxAuth';
 import toast,{ Toaster } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -12,7 +12,13 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
     const submitRegister = (e) => {
-      setLoading(true);
+      e.preventDefault();
+      // setLoading(true);
+      let data = {
+        email:email,
+        password: password
+      }
+      dispatch(setPostLogin('login', data))
     }
 
   return (
