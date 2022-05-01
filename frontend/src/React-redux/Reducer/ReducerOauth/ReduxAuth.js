@@ -1,5 +1,7 @@
 import {
   BACK_DEFAULT_CHANGE,
+  LOADING_DATA,
+  LOADING_FALSE,
   ON_CHANGE_LOGIN,
   ON_CHANGE_REGISTER,
   STATUS_API,
@@ -61,13 +63,24 @@ export const setChangeLogin = (name, value) => {
 // ======= START POST LOGIN =======
 export const setPostLogin = (url, data) => {
   return (dispatch) => {
+    dispatch({
+      type:LOADING_DATA
+    })
     axios
-      .post(`${API}${url}`, data)
-      .then((res) => {
-        console.log(res.data);
+    .post(`${API}${url}`, data)
+    .then((res) => {
+      console.log(res.data);
+      dispatch({
+        type:LOADING_FALSE
       })
-      .catch((error) => {
-        console.log(error);
+    })
+      .catch((err) => {
+        const Error = err.response.data.message
+        toast.error(Error)
+        console.log(err.response.data.message);
+        dispatch({
+          type:LOADING_FALSE
+        })
       });
   };
 };

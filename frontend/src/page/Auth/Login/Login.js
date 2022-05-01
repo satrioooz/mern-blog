@@ -9,10 +9,11 @@ import { useDispatch, useSelector } from "react-redux";
 const Login = () => {
   const dispatch = useDispatch();
   const formLogin = useSelector((state) => state.Oauth.formLogin);
+  const loading = useSelector((state) => state.status .loading);
   const { email, password } = formLogin;
 
   //  STATE
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const submitRegister = (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ const Login = () => {
   return (
     <div className="flex bg-primary text-primary dark:bg-darkCol items-center w-full h-screen">
       <div className="flex w-full items-center justify-center px-[25px]">
-        {/* <Toaster /> */}
+        <Toaster />
         <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] dark:bg-navCol bg-slate-200">
           <h1 className="text-center text-semibold text-[1.2rem] text-black dark:text-white">
             Login
@@ -76,7 +77,7 @@ const Login = () => {
             {loading && (
               <svg
                 role="status"
-                className="w-3 h-3 mr-1  text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                className="w-4 h-4 mr-1  text-gray-200 animate-spin dark:text-white fill-blue-600"
                 viewBox="0 0 100 101"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
