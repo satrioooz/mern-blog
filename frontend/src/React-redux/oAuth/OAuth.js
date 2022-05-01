@@ -13,8 +13,8 @@ const initState = {
     confirmPassword: "",
   },
   formLogin: {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   },
   status: "",
 };
@@ -40,14 +40,14 @@ const Oauth = (state = initState, action) => {
         ...state,
         user: action.payload,
       };
-      case ON_CHANGE_LOGIN:
-        return {
-          ...state,
-          formLogin: {
-            ...state.formLogin,
-            [action.name]: action.value,
-          },
-        };
+    case ON_CHANGE_LOGIN:
+      return {
+        ...state,
+        formLogin: {
+          ...state.formLogin,
+          [action.name]: action.value,
+        },
+      };
 
     default:
       return state;

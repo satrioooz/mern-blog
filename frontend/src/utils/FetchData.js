@@ -7,6 +7,6 @@ export const postRegis = (data) => {
 };
 
 export const fetchData = (url, data) => {
-  const res = axios.post(`${API}${url}`, data)
-  return res
-}
+  const res = axios.post(`${API}${url}`, data);
+  return res;
+};

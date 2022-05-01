@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ListMobile = () => {
-
   return (
     <div className="bg-primary dark:bg-darkCol w-full h-full flex justify-center items-center text-center font-bold text-[1.3rem]">
-      <ul className="py-1 bg-primary dark:bg-darkCol" aria-labelledby="dropdown">
+      <ul
+        className="py-1 bg-primary dark:bg-darkCol"
+        aria-labelledby="dropdown"
+      >
         <li>
           <Link
             to="/"
@@ -34,7 +36,6 @@ const ListMobile = () => {
             Register
           </Link>
         </li>
-       
       </ul>
     </div>
   );

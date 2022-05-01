@@ -6,7 +6,7 @@ import {
 } from "../../ActionType/Type";
 import axios from "axios";
 import { API } from "../../../API/API";
-import toast,{Toaster} from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { fetchData, postRegis } from "../../../utils/FetchData";
 
 // ======= START ON CHANGE REGISTER =======
@@ -53,21 +53,22 @@ export const setChangeDefault = (nama, confirmPassword, email, password) => {
 // ======= END DEFAULT VALUE REGISTER =======
 
 // ======= START ON CHANGE LOGIN =======
-export const setChangeLogin = (name,value) => {
-  return {type:ON_CHANGE_LOGIN,name,value}
-}
+export const setChangeLogin = (name, value) => {
+  return { type: ON_CHANGE_LOGIN, name, value };
+};
 // ======= END ON CHANGE LOGIN =======
 
 // ======= START POST LOGIN =======
-export const setPostLogin =  (url,data) => {
+export const setPostLogin = (url, data) => {
   return (dispatch) => {
-   axios.post(`${API}${url}`,data)
-    .then((res) => {
-      console.log(res.data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  }
-}
+    axios
+      .post(`${API}${url}`, data)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
 // ======= END POST LOGIN =======
