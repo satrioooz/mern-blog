@@ -44,7 +44,7 @@ const Oauth = (state = initState, action) => {
         return {
           ...state,
           formLogin: {
-            ...state.user,
+            ...state.formLogin,
             [action.name]: action.value,
           },
         };

@@ -6,9 +6,8 @@ import {
 } from "../../ActionType/Type";
 import axios from "axios";
 import { API } from "../../../API/API";
-import toast from "react-hot-toast";
+import toast,{Toaster} from "react-hot-toast";
 import { postRegis } from "../../../utils/FetchData";
-import { dispatch } from "react-hot-toast/dist/core/store";
 
 // ======= START ON CHANGE REGISTER =======
 export const setChangeRegister = (name, value) => {

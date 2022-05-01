@@ -18,7 +18,7 @@ const ListMobile = () => {
         {/* LOGIN */}
         <li>
           <Link
-            to="/"
+            to="/login"
             className="block py-2 px-4 text-lg text-[#6A7281]  hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-[#9CA3AF] dark:hover:text-white"
           >
             Login

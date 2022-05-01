@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { setChangeLogin } from '../../../React-redux/Reducer/ReducerOauth/ReduxAuth';
+import toast,{ Toaster } from 'react-hot-toast';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const formLogin = useSelector((state) => state.Oauth.formLogin);
+  const {email,password} = formLogin;
 
-    
+  //  STATE
+  const [loading, setLoading] = useState(false);
+
+    const submitRegister = (e) => {
+      setLoading(true);
+    }
 
   return (
     <div className="flex bg-primary text-primary dark:bg-darkCol items-center w-full h-screen">
     <div className="flex w-full items-center justify-center px-[25px]">
-      <Toaster />
+      {/* <Toaster /> */}
       <form className="flex  justify-center flex-col lg:w-[30%] sm:w-[50%] w-full rounded-md p-3 lg:h-[65vh] dark:bg-navCol bg-slate-200">
         <h1 className="text-center text-semibold text-[1.2rem] text-black dark:text-white">
           Login
@@ -44,25 +54,6 @@ const Login = () => {
           />
         </div>
 
-        <div className="flex flex-col mb-3">
-          <label className="text-black dark:text-white font-medium text-sm">
-            Confirm Password
-          </label>
-          <input
-            value={confirmPassword}
-            onChange={(e) => {
-              dispatch(setChangeRegister("confirmPassword", e.target.value));
-            }}
-            className="bg-ligthDark dark:bg-primary w-full h-10 px-3 py-2 peer text-black dark:text-white placeholder:text-slate-400 rounded-lg"
-            type="password"
-            placeholder="Enter you password"
-          />
-          {wrong && (
-            <p className=" peer-invalid:visible pl-2 pt-2 text-sm text-red-500">
-              ! Ups confirm password not same
-            </p>
-          )}
-        </div>
 
         <button
           onClick={submitRegister}
