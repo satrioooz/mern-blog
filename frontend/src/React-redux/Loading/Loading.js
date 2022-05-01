@@ -12,11 +12,11 @@ const status = (state = initState, action) => {
         // CHANGE STATE LOADING TO TRUE
         loading: true,
       };
-      case LOADING_FALSE:
-          return {
-              ...state,
-              loading:false
-          }
+    case LOADING_FALSE:
+      return {
+        ...state,
+        loading: false,
+      };
     default:
       return state;
   }

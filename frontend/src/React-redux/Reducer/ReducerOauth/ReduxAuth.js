@@ -64,23 +64,23 @@ export const setChangeLogin = (name, value) => {
 export const setPostLogin = (url, data) => {
   return (dispatch) => {
     dispatch({
-      type:LOADING_DATA
-    })
+      type: LOADING_DATA,
+    });
     axios
-    .post(`${API}${url}`, data)
-    .then((res) => {
-      console.log(res.data);
-      dispatch({
-        type:LOADING_FALSE
+      .post(`${API}${url}`, data)
+      .then((res) => {
+        console.log(res.data);
+        dispatch({
+          type: LOADING_FALSE,
+        });
       })
-    })
       .catch((err) => {
-        const Error = err.response.data.message
-        toast.error(Error)
+        const Error = err.response.data.message;
+        toast.error(Error);
         console.log(err.response.data.message);
         dispatch({
-          type:LOADING_FALSE
-        })
+          type: LOADING_FALSE,
+        });
       });
   };
 };

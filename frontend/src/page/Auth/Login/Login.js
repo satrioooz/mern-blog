@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Login = () => {
   const dispatch = useDispatch();
   const formLogin = useSelector((state) => state.Oauth.formLogin);
-  const loading = useSelector((state) => state.status .loading);
+  const loading = useSelector((state) => state.status.loading);
   const { email, password } = formLogin;
 
   //  STATE
