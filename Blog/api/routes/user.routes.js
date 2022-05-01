@@ -7,9 +7,13 @@ module.exports = (app) => {
     verifyEmailUser,
     logout,
     getData,
+    changePassword,
+    changePasswordOtherOption,
+    verifyOtp,
+    changePasswordEmailOption
   } = require("../controllers/user.controllers");
   const router = require("express").Router();
-  const { loginRequired, verifyEmail } = require("../../config/jwt");
+  const { loginRequired, verifyEmail} = require("../../config/jwt");
 
   router.post(
     "/register",
@@ -35,11 +39,19 @@ module.exports = (app) => {
 
   router.post("/login", verifyEmail, login);
 
-  router.get("/verify-email", verifyEmailUser);
-
-  router.get("/logout", logout);
-
+  router.get("/active", verifyEmailUser);
+  
   router.get("/data", loginRequired, getData);
-
+  
+  router.put("/change-password", changePassword);
+  
+  router.post("/change-password-other-option", changePasswordOtherOption);
+  
+  router.post("/change-password-other-option/verify-otp", verifyOtp);
+  
+  router.put("/change-password-other-option/change-password", changePasswordEmailOption);
+  
+  router.get("/logout", logout);
+  
   app.use("/api", router);
 };

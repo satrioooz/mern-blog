@@ -16,7 +16,7 @@ const { config } = require("dotenv");
 db.mongoose
   .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   })
   .then((result) => {
     console.log("Database connected");

@@ -22,7 +22,7 @@ exports.loginRequired = async (req, res, next) => {
 
 exports.verifyEmail = async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
-  if (!user) {
+  if(!user) {
     res.status(409).json({
       message: "User tidak ditemukan",
     });

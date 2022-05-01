@@ -21,6 +21,10 @@ module.exports = (mongoose) => {
         type: Boolean,
         default: false,
       },
+      expiresAt:{
+        type: Date,
+        default: Date.now() + 360000
+      }
     },
     { timestamps: true }
   );
