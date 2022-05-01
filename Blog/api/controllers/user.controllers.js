@@ -131,7 +131,7 @@ exports.changePassword = async (req, res) =>{
         })
       }else{
         findUser.password = hashPassword;
-        await findUser.save()
+        findUser.save()
         .then((result) => {
           res.status(200).json({
             message: "Berhasil ubah password"
@@ -158,7 +158,7 @@ exports.changePasswordOtherOption = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashOtp = await bcrypt.hash(otp.otp, salt);
     otp.otp = hashOtp;
-    await otp.save()
+    otp.save()
     .then((result) => {
       require("./change-password-email-option")(transporter, findUser, OTP, res);
     }).catch((err) => {
